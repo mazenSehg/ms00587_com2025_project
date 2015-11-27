@@ -1,0 +1,11 @@
+<footer class="footer">
+  <small>
+    This website is build using Ruby on Rails - Produced by Mazen Sehgal
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "About",   '#' %></li>
+      <li><%= link_to "Contact", '#' %></li>
+    </ul>
+  </nav>
+</footer>

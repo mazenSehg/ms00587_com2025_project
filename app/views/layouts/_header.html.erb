@@ -1,0 +1,34 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+
+    <nav>
+
+      </div>
+            <%= link_to "MAZ-BAY", root_path, id: "logo" %><div class="container">
+      <% if user_signed_in? %>
+        <ul class="nav navbar-nav navbar-right">
+            
+          <li>
+            <%= link_to "New Pin", new_pin_path %>
+          </li>
+          <li>
+            <%= link_to "Account", edit_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to "Sign Up", new_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to "Sign In", new_user_session_path %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+    
+    </nav>
+  </div>
+</header>

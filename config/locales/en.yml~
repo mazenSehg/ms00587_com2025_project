@@ -1,0 +1,17 @@
+en: 
+  pages: 
+    Contact: 
+      contact_us: "Complete the following fields to get in touch with us"
+      email: "Email:"
+      enter_email: "Enter your email"
+      enter_message: "What do you want to say?"
+      enter_name: "Enter your name"
+      enter_telephone: "Enter your telephone number"
+      message: "Message:"
+      name: "Name:"
+      submit: "Contact Us"
+      telephone: "Telephone:"
+      title: "contact us"
+    request_contact: 
+      email_sent: "Thank you, we will be in touch shortly"
+      no_email: "You must supply an email address"

@@ -1,0 +1,16 @@
+%dl
+ %dt Name:
+ %dd = @name
+
+ %dt Email:
+ %dd = @email
+
+ %dt Telephone:
+ %dd = @telephone
+
+
+ %p= @message
+
+
+ %p Thanks,
+ %p= @name
