@@ -19,7 +19,7 @@
           <div class="col-md-7">
 
 
-  <%=link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure you want to buy this item?" }, class: "btn btn-lg btn-primary" %>
+  <%=link_to "PURCHASE", pin_path, method: :delete, data: { confirm: "Are you sure you want to buy this item?" }, class: "btn btn-lg btn-primary" %>
 
 
 <p class="user">
