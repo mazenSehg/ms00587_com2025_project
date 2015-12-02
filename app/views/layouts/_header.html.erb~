@@ -11,7 +11,7 @@
             <%= link_to "Shop", shop_path %>
           </li>            
           <li>
-            <%= link_to "New Advert", new_pin_path %>
+            <%= link_to "New Advert", '#' %>
           </li>
           <li>
             <%= link_to "Account", edit_user_registration_path %>

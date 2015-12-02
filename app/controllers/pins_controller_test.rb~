@@ -1,0 +1,26 @@
+require 'test_helper'
+
+class PinsControllerTest < ActionController::TestCase
+
+  test "should get edit" do
+    get :edit
+    assert_response :success
+  end
+
+
+  test "should get home" do
+    get :index
+    assert_response :success
+   end
+
+  test "should get show" do
+    get :show
+    assert_response :success
+   end
+
+  test "should get show" do
+    get :new
+    assert_response :success
+   end
+end
+

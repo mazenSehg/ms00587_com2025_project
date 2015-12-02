@@ -5,7 +5,7 @@
     The only shop online where you can buy cheap stuff
   </h2>
 
-  <%= link_to "Check out our shop!", '#', class: "btn btn-lg btn-primary" %>
+  <%= link_to "Check out our shop!", shop_path, class: "btn btn-lg btn-primary" %>
 </div>
 
 
