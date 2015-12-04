@@ -1,20 +1,59 @@
-#pin_show.row
-  .col-md-8.col-md-offset-2
-    .panel.panel-default
-      .panel-heading.pin_image
-        = image_tag @pin.image.url
-      .panel-body
-        %h1
-          = @pin.title
-        %p.description
-          = @pin.Description
-      .panel-footer
-        .row
-          .col-md-6
-            %p.user
+<div class="col-md-6 col-md-offset-3"
+
+<div class="row" id="pin_show">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading pin_image">
+        <%= image_tag @pin.image.url(:medium) %>
+      </div>
+      <div class="panel-body">
+        <h1>
+          <%= @pin.title %>
+        </h1>
+        <p class="description">
+          <%= @pin.Description %>
+        </p>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-md-7">
+
+
+
+
+<p class="user">
               Submitted by
-              \#{@pin.user.email}
-          .col-md-6
-            - if user_signed_in?
-              = link_to "Edit", edit_pin_path, class: "btn btn-default"
-              = link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
+<%= @pin.user.email %>
+            </p>
+          </div>
+          <div class="col-md-7">
+            <% if user_signed_in? %>
+              <%= link_to "Edit", edit_pin_path, class: "btn btn-default" %>
+              <%= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+            <% end %>
+
+<div id="comments">
+  <h2 class="comment_count">
+    <%= pluralize(@pin.comments.count, "Comment") %>
+  </h2>
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <p class="username">
+        <%= comment.user.name %>
+      </p>
+      <p class="content">
+        <%= comment.content %>
+      </p>
+    </div>
+  <% end %>
+  <%= render "comments/form" %>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

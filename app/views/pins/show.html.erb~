@@ -19,7 +19,6 @@
           <div class="col-md-7">
 
 
-  <%=link_to "PURCHASE", pin_path, method: :delete, data: { confirm: "Are you sure you want to buy this item?" }, class: "btn btn-lg btn-primary" %>
 
 
 <p class="user">
@@ -32,10 +31,29 @@
               <%= link_to "Edit", edit_pin_path, class: "btn btn-default" %>
               <%= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
             <% end %>
+
+<div id="comments">
+  <h2 class="comment_count">
+    <%= pluralize(@pin.comments.count, "Comment") %>
+  </h2>
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <p class="emails">
+        <%= comment.user.email %>
+      </p>
+      <p class="content">
+        <%= comment.content %>
+      </p>
+    </div>
+  <% end %>
+  <%= render "comments/form" %>
+</div>
+
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
