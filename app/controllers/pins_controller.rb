@@ -45,6 +45,11 @@ class PinsController < ApplicationController
 		redirect_to :back
 	end
 
+	def downvote
+		@pin.downvote_by current_user
+		redirect_to :back
+	end
+
 	private
 
 	def pin_params
