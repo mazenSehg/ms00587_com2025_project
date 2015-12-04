@@ -1,8 +1,8 @@
 <div class="center jumbotron">
-  <h1>Welcome to Mazens Shoppe</h1>
+  <h1>Welcome to Maztagram</h1>
 
   <h2>
-    The only shop online where you can buy cheap stuff
+    The social network where you can share and see friends pictures
   </h2>
 
   <%= link_to "Check out our shop!", shop_path, class: "btn btn-lg btn-primary" %>

@@ -3,17 +3,22 @@
 
 /* mixins, variables, etc. */
 
-
-form label, form input {
-display: block;
-margin: 10px;
-}
-
-$gray-medium-light: #eaeaea;
+$gray-medium-light: #F7D358;
 
 /* universal */
+.jumbotron{background-color: #FFFFFF!important;}
+
+.btn.sharp {
+  border-radius:0;
+}
+
+.btn-primary {
+    background: #FFBF00;
+    color: #ffffff;
+}
 
 body {
+  background-color: #E6E6E6;
   padding-top: 60px;
 }
 
