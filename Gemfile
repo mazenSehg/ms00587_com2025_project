@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'haml'
 gem 'simple_form'
+gem 'acts_as_votable'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'rails', '4.2.4'

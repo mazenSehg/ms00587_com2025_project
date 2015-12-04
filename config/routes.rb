@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
  resources :pins do 
   resources :comments
+  member do
+    put "like", to: "pins#upvote"
+  end
  end
+
+
  get 'about'   => 'pages#about'
  get 'shop'    => 'pins#index'
  get 'contact' => 'pages#contact'
